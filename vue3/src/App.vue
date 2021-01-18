@@ -34,6 +34,8 @@ import render from './components/render/index.vue';
 import { nextTick } from 'vue';
 import { testJsx } from './components/jsx/index.js';
 
+import {myPromise} from './myPromise.js'
+
 export default {
   name: 'App',
   components: {
