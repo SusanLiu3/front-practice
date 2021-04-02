@@ -3,9 +3,7 @@
   <combinedApi />
   <setup name="setup" :title="curTitle" />
   <!-- 指令参数 [title] 动态绑定求值 -->
-  <div :[title]="val" ref="content">
-    {{ msg }}
-  </div>
+  <div :[title]="val" ref="content">{{ msg }}</div>
   <button @click="copyToBoard(msg)">复制</button>
   <!-- 多事件处理 -->
   <button @click="modifyMsg(), sayHi()">点击</button>
@@ -20,22 +18,23 @@
   <div id="red" v-bind="{ id: 'yellow' }">v-bind 合并顺序</div>
   <testJsx title="test jsx" />
   <render />
+  <button @click="clkProcess">防抖</button>
 </template>
 
 <script>
-import combinedApi from './components/combined/combinedApi.vue';
-import setup from './components/combined/setup.vue';
-import provide from './components/combined/provide.vue';
-import temp from './components/combined/template.vue';
-import reactive from './components/reactive/index.vue';
-import computed from './components/reactive/computed.vue';
-import tele from './components/teleport/index.vue';
-import render from './components/render/index.vue';
-import { nextTick } from 'vue';
-import { testJsx } from './components/jsx/index.js';
+import combinedApi from "./components/combined/combinedApi.vue";
+import setup from "./components/combined/setup.vue";
+import provide from "./components/combined/provide.vue";
+import temp from "./components/combined/template.vue";
+import reactive from "./components/reactive/index.vue";
+import computed from "./components/reactive/computed.vue";
+import tele from "./components/teleport/index.vue";
+import render from "./components/render/index.vue";
+import { nextTick } from "vue";
+import { testJsx } from "./components/jsx/index.js";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     combinedApi,
     setup,
@@ -45,48 +44,80 @@ export default {
     temp,
     tele,
     testJsx,
-    render,
+    render
   },
   data() {
     return {
-      msg: 'vue3 practice',
-      title: 'name',
-      val: 'lss',
-      curTitle: 'setup练习',
-      list: ['apple', 'banana'],
+      msg: "vue3 practice",
+      title: "name",
+      val: "lss",
+      curTitle: "setup练习",
+      list: ["apple", "banana"],
+      debounceFun: null
     };
   },
-
+  created() {
+    this.debounceFun = this.debounce((...args) => {
+      console.log(args || "kkk");
+    }, 1000);
+  },
   methods: {
     modifyMsg() {
-      this.msg = 'change msg';
+      this.msg = "change msg";
       nextTick(() => {
-        if (this.$refs.content.innerHTML === 'change msg') {
-          console.log('dom 修改完成');
+        if (this.$refs.content.innerHTML === "change msg") {
+          console.log("dom 修改完成");
         }
       });
     },
     sayHi() {
-      console.log('hi');
+      console.log("hi");
     },
     // 这个方法在支持 document.execCommand('copy')的方法才适用
     copyToBoard(msg) {
       // 创建text area
-      let dom = document.createElement('textarea');
+      let dom = document.createElement("textarea");
       // 将需要复制的值赋给text area
       dom.value = msg;
       // 添加css 防 删除添加时闪烁
-      dom.setAttribute('readonly','');
-      dom.style.position = 'absolute';
-      dom.style.left = '-9999px';
+      dom.setAttribute("readonly", "");
+      dom.style.position = "absolute";
+      dom.style.left = "-9999px";
       document.body.appendChild(dom);
       // 选中text area的值
       dom.select();
       // 复制
-      document.execCommand('copy');
+      document.execCommand("copy");
       // 删除
       document.body.removeChild(dom);
     },
-  },
+    clkProcess() {
+      this.debounceFun("hello");
+    },
+    debounce(fun, wait) {
+      let timer = null;
+      return function() {
+        clearTimeout(timer);
+        let cxt = this;
+        let args = arguments;
+        timer = setTimeout(() => {
+          fun.apply(cxt, args);
+        }, wait);
+      };
+    },
+    throttle(fun, wait) {
+      let timer = null;
+      return function() {
+        if (!timer) {
+          let cxt = this;
+          let args = arguments;
+          setTimeout(() => {
+            timer = null;
+            fun.apply(cxt, args);
+          }, wait);
+        }
+      };
+    }
+  }
 };
 </script>
