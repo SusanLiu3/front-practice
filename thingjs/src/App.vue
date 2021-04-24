@@ -10,10 +10,16 @@ export default {
   components: {},
   mounted() {
     /* eslint-disable */
-    const app = new THING.App({
-      container: "div3d", // 3D容器
-      url: 'https://www.thingjs.com/static/models/storehouse',
+    let app = new THING.App({
+      url: "https://www.thingjs.com/static/models/storehouse",
     });
+    app.on("load", function(ev) {
+      app.level.change(ev.campus);
+      console.log(ev.buildings)
+    });
+    app.on(THING.EventType.EnterLevel,'.Building',function(ev){
+      console.log(ev,'kkkkk')
+    })
   }
 };
 </script>
@@ -22,7 +28,5 @@ export default {
 #app {
 }
 #div3d {
-  width: 100%;
-  height: 100%;
 }
 </style>
