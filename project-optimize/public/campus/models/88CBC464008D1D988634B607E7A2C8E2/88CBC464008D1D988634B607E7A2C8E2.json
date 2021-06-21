@@ -1,0 +1,1321 @@
+{
+  "materials": [
+    {
+      "name": "Material__25",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "alphaMode": "OPAQUE"
+    },
+    {
+      "name": "(color 143 225 87)",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.56078434,
+          0.882352948,
+          0.34117648,
+          1.0
+        ],
+        "metallicFactor": 0.1,
+        "roughnessFactor": 0.5
+      }
+    },
+    {
+      "name": "(color 228 214 153)",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.894117653,
+          0.8392157,
+          0.6,
+          1.0
+        ],
+        "metallicFactor": 0.1,
+        "roughnessFactor": 0.5
+      }
+    }
+  ],
+  "images": [
+    {
+      "uri": "F36554E9859F386F56F7BF48DDB64172.jpg"
+    }
+  ],
+  "textures": [
+    {
+      "name": "960382.jpg",
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Lo-园区_01",
+      "primitives": [
+        {
+          "material": 0,
+          "mode": 4,
+          "indices": 0,
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lo-办公楼建筑墙_01",
+      "primitives": [
+        {
+          "material": 1,
+          "mode": 4,
+          "indices": 4,
+          "attributes": {
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cl-办公楼1F天花板_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 8,
+          "attributes": {
+            "NORMAL": 10,
+            "POSITION": 9,
+            "TEXCOORD_0": 11
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wl-办公楼1F墙_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 12,
+          "attributes": {
+            "NORMAL": 14,
+            "POSITION": 13,
+            "TEXCOORD_0": 15
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fl-办公楼1F地板_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 16,
+          "attributes": {
+            "NORMAL": 18,
+            "POSITION": 17,
+            "TEXCOORD_0": 19
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wl-办公楼2F墙_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 20,
+          "attributes": {
+            "NORMAL": 22,
+            "POSITION": 21,
+            "TEXCOORD_0": 23
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fl-办公楼2F地板_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 24,
+          "attributes": {
+            "NORMAL": 26,
+            "POSITION": 25,
+            "TEXCOORD_0": 27
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cl-办公楼2F天花板_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 28,
+          "attributes": {
+            "NORMAL": 30,
+            "POSITION": 29,
+            "TEXCOORD_0": 31
+          }
+        }
+      ]
+    },
+    {
+      "name": "Wl-办公楼3F墙_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 32,
+          "attributes": {
+            "NORMAL": 34,
+            "POSITION": 33,
+            "TEXCOORD_0": 35
+          }
+        }
+      ]
+    },
+    {
+      "name": "Fl-办公楼3F地板_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 36,
+          "attributes": {
+            "NORMAL": 38,
+            "POSITION": 37,
+            "TEXCOORD_0": 39
+          }
+        }
+      ]
+    },
+    {
+      "name": "Cl-办公楼3F天花板_01",
+      "primitives": [
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 40,
+          "attributes": {
+            "NORMAL": 42,
+            "POSITION": 41,
+            "TEXCOORD_0": 43
+          }
+        }
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 6944,
+      "uri": "007B9566B29E3FED7C73A6B2519E2CC9.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 192,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 300,
+      "byteOffset": 192
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 300,
+      "byteOffset": 492
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 200,
+      "byteOffset": 792
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 72,
+      "byteOffset": 992
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 288,
+      "byteOffset": 1064
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 288,
+      "byteOffset": 1352
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 192,
+      "byteOffset": 1640
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 12,
+      "byteOffset": 1832
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 1844
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 1892
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 32,
+      "byteOffset": 1940
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 144,
+      "byteOffset": 1972
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 480,
+      "byteOffset": 2116
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 480,
+      "byteOffset": 2596
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 320,
+      "byteOffset": 3076
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 12,
+      "byteOffset": 3396
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 3408
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 3456
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 32,
+      "byteOffset": 3504
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 144,
+      "byteOffset": 3536
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 480,
+      "byteOffset": 3680
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 480,
+      "byteOffset": 4160
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 320,
+      "byteOffset": 4640
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 12,
+      "byteOffset": 4960
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 4972
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 5020
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 32,
+      "byteOffset": 5068
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 12,
+      "byteOffset": 5100
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 5112
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 5160
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 32,
+      "byteOffset": 5208
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 144,
+      "byteOffset": 5240
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 480,
+      "byteOffset": 5384
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 480,
+      "byteOffset": 5864
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 320,
+      "byteOffset": 6344
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 12,
+      "byteOffset": 6664
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 6676
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 6724
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 32,
+      "byteOffset": 6772
+    },
+    {
+      "buffer": 0,
+      "target": 34963,
+      "byteLength": 12,
+      "byteOffset": 6804
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 6816
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 48,
+      "byteOffset": 6864
+    },
+    {
+      "buffer": 0,
+      "target": 34962,
+      "byteLength": 32,
+      "byteOffset": 6912
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 0,
+      "byteOffset": 0,
+      "count": 96
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 1,
+      "byteOffset": 0,
+      "count": 25,
+      "min": [
+        -216.976577758789,
+        -144.025756835938,
+        0.0
+      ],
+      "max": [
+        216.976577758789,
+        144.025756835938,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 2,
+      "byteOffset": 0,
+      "count": 25
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 3,
+      "byteOffset": 0,
+      "count": 25
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 4,
+      "byteOffset": 0,
+      "count": 36
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 5,
+      "byteOffset": 0,
+      "count": 24,
+      "min": [
+        -103.168037414551,
+        -77.228645324707,
+        0.0
+      ],
+      "max": [
+        103.168037414551,
+        77.228645324707,
+        187.162994384766
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 6,
+      "byteOffset": 0,
+      "count": 24
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 7,
+      "byteOffset": 0,
+      "count": 24
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 8,
+      "byteOffset": 0,
+      "count": 6
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 9,
+      "byteOffset": 0,
+      "count": 4,
+      "min": [
+        -112.409606933594,
+        -81.6328582763672,
+        0.0
+      ],
+      "max": [
+        112.409606933594,
+        81.6328582763672,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 10,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 11,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 12,
+      "byteOffset": 0,
+      "count": 72
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 13,
+      "byteOffset": 0,
+      "count": 40,
+      "min": [
+        -115.730194091797,
+        -84.9534378051758,
+        0.0
+      ],
+      "max": [
+        115.730194091797,
+        84.9534378051758,
+        29.606201171875
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 14,
+      "byteOffset": 0,
+      "count": 40
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 15,
+      "byteOffset": 0,
+      "count": 40
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 16,
+      "byteOffset": 0,
+      "count": 6
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 17,
+      "byteOffset": 0,
+      "count": 4,
+      "min": [
+        -112.409606933594,
+        -81.6328582763672,
+        0.0
+      ],
+      "max": [
+        112.409606933594,
+        81.6328582763672,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 18,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 19,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 20,
+      "byteOffset": 0,
+      "count": 72
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 21,
+      "byteOffset": 0,
+      "count": 40,
+      "min": [
+        -115.730194091797,
+        -84.9534378051758,
+        0.0
+      ],
+      "max": [
+        115.730194091797,
+        84.9534378051758,
+        29.606201171875
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 22,
+      "byteOffset": 0,
+      "count": 40
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 23,
+      "byteOffset": 0,
+      "count": 40
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 24,
+      "byteOffset": 0,
+      "count": 6
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 25,
+      "byteOffset": 0,
+      "count": 4,
+      "min": [
+        -112.409606933594,
+        -81.6328582763672,
+        0.0
+      ],
+      "max": [
+        112.409606933594,
+        81.6328582763672,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 26,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 27,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 28,
+      "byteOffset": 0,
+      "count": 6
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 29,
+      "byteOffset": 0,
+      "count": 4,
+      "min": [
+        -112.409606933594,
+        -81.6328582763672,
+        0.0
+      ],
+      "max": [
+        112.409606933594,
+        81.6328582763672,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 30,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 31,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 32,
+      "byteOffset": 0,
+      "count": 72
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 33,
+      "byteOffset": 0,
+      "count": 40,
+      "min": [
+        -115.730194091797,
+        -84.9534378051758,
+        0.0
+      ],
+      "max": [
+        115.730194091797,
+        84.9534378051758,
+        29.606201171875
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 34,
+      "byteOffset": 0,
+      "count": 40
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 35,
+      "byteOffset": 0,
+      "count": 40
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 36,
+      "byteOffset": 0,
+      "count": 6
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 37,
+      "byteOffset": 0,
+      "count": 4,
+      "min": [
+        -112.409606933594,
+        -81.6328582763672,
+        0.0
+      ],
+      "max": [
+        112.409606933594,
+        81.6328582763672,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 38,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 39,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "bufferView": 40,
+      "byteOffset": 0,
+      "count": 6
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 41,
+      "byteOffset": 0,
+      "count": 4,
+      "min": [
+        -112.409606933594,
+        -81.6328582763672,
+        0.0
+      ],
+      "max": [
+        112.409606933594,
+        81.6328582763672,
+        0.0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "bufferView": 42,
+      "byteOffset": 0,
+      "count": 4
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "bufferView": 43,
+      "byteOffset": 0,
+      "count": 4
+    }
+  ],
+  "nodes": [
+    {
+      "name": "RootNode",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        1,
+        16
+      ]
+    },
+    {
+      "name": "小白楼",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        2,
+        4,
+        8,
+        12
+      ]
+    },
+    {
+      "name": "小白楼外立面",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        3
+      ]
+    },
+    {
+      "name": "Lo-办公楼建筑墙_01",
+      "translation": [
+        1.59707641601563,
+        -14.3831958770752,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.40058100223541,
+        1.40058100223541,
+        1.0
+      ],
+      "mesh": 1
+    },
+    {
+      "name": "小白楼1层",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "Cl-办公楼1F天花板_01",
+      "translation": [
+        15.0728874206543,
+        -17.0278854370117,
+        29.6061973571777
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 2
+    },
+    {
+      "name": "Wl-办公楼1F墙_01",
+      "translation": [
+        15.0728874206543,
+        -17.0278854370117,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 3
+    },
+    {
+      "name": "Fl-办公楼1F地板_01",
+      "translation": [
+        15.0728874206543,
+        -17.0278854370117,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 4
+    },
+    {
+      "name": "小白楼2层",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "name": "Wl-办公楼2F墙_01",
+      "translation": [
+        15.0728874206543,
+        -17.0278873443604,
+        32.7431526184082
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 5
+    },
+    {
+      "name": "Fl-办公楼2F地板_01",
+      "translation": [
+        15.0728874206543,
+        -17.0278873443604,
+        32.7431526184082
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 6
+    },
+    {
+      "name": "Cl-办公楼2F天花板_01",
+      "translation": [
+        15.0728874206543,
+        -17.0278873443604,
+        62.3493499755859
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 7
+    },
+    {
+      "name": "小白楼3层",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "name": "Wl-办公楼3F墙_01",
+      "translation": [
+        15.0728874206543,
+        -17.027889251709,
+        64.8491363525391
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 8
+    },
+    {
+      "name": "Fl-办公楼3F地板_01",
+      "translation": [
+        15.0728874206543,
+        -17.027889251709,
+        64.8491363525391
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 9
+    },
+    {
+      "name": "Cl-办公楼3F天花板_01",
+      "translation": [
+        15.0728874206543,
+        -17.027889251709,
+        94.4553375244141
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 10
+    },
+    {
+      "name": "地面",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        17
+      ]
+    },
+    {
+      "name": "Lo-园区_01",
+      "translation": [
+        6.33578491210938,
+        -7.39692687988281,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        3.93699789047241,
+        3.93699789047241,
+        1.0
+      ],
+      "mesh": 0
+    }
+  ],
+  "asset": {
+    "generator": "FBX2glTF",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Root Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "samplers": [
+    {}
+  ]
+}
