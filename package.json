@@ -1,7 +1,7 @@
 {
-  "name": "front-practice",
+  "name": "practice",
   "version": "1.0.0",
-  "description": "",
+  "description": "[jest参考文档](https://www.yuque.com/sunluyong/node/gq5qaa#L9xkp)",
   "main": "index.js",
   "scripts": {
     "test": "jest /tdd/jest/test/sum.test.js",
@@ -10,6 +10,16 @@
   "author": "liuss",
   "license": "ISC",
   "devDependencies": {
+    "cypress": "^7.5.0",
     "jest": "^27.0.4"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SusanLiu93/front-practice.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SusanLiu93/front-practice/issues"
+  },
+  "homepage": "https://github.com/SusanLiu93/front-practice#readme"
 }
