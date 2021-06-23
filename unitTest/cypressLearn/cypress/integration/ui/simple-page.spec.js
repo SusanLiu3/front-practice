@@ -4,8 +4,10 @@ describe('simple page interaction', function () {
             cy.get('.tab-list>li:last-child').click()
             cy.get('.add-btn').click()
             cy.get('input[type="text"]').type('我是布局名称')
-            cy.get('.btn-cancel').click()
-
+            cy.server()
+            cy.route('POST','https://jsonplaceholder.typicode.com/posts/',200).as('upload')
+            cy.get('.el-upload__input').attachFile('1.jpg')
+            cy.wait('@upload')
         })
     })
 })
