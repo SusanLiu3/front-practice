@@ -10,7 +10,7 @@ describe('create object in 3d', function () {
                     window.THING = win.THING
                     window.app = win.app
                     window.campus = window.campus || win.campus
-                    createBox(win)
+                    createBox()
                 })
             })
         })
@@ -23,7 +23,7 @@ describe('create object in 3d', function () {
                 window.THING = win.THING
                 window.app = win.app
                 window.campus = window.campus || win.campus
-                createMarker(win)
+                createMarker()
             })
         })
     })
