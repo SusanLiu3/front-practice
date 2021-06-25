@@ -1,16 +1,54 @@
 {
-  "name": "cypresslearn",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress": "cypress run",
-    "cypress-gui": "cypress open"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress:run",
+    "cypress:record": "cypress:record"
   },
-  "author": "",
-  "license": "ISC",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "vue": "^2.6.11"
+  },
   "devDependencies": {
-    "cypress": "^7.5.0"
-  }
+    "@cypress/webpack-preprocessor": "^5.9.0",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "axios": "^0.21.1",
+    "babel-eslint": "^10.1.0",
+    "cypress": "^7.6.0",
+    "cypress-file-upload": "^5.0.8",
+    "element-ui": "^2.15.2",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^6.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^10.1.1",
+    "vue-router": "^3.5.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

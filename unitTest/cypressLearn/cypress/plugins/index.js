@@ -12,11 +12,24 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-/**
- * @type {Cypress.PluginConfig}
- */
-// eslint-disable-next-line no-unused-vars
-module.exports = (on, config) => {
-  // `on` is used to hook into various events Cypress emits
-  // `config` is the resolved Cypress config
+// /**
+//  * @type {Cypress.PluginConfig}
+//  */
+// // eslint-disable-next-line no-unused-vars
+// module.exports = (on, config) => {
+//   // `on` is used to hook into various events Cypress emits
+//   // `config` is the resolved Cypress config
+// }
+const webpack = require('@cypress/webpack-preprocessor')
+
+module.exports = (on) => {
+  // bundle spec files using same webpack logic as "normal" application
+  // const options = {
+  //   // send in the options from your webpack.config.js, so it works the same
+  //   // as your app's code
+  //   webpackOptions: require('../../webpack.config'),
+  //   watchOptions: {},
+  // }
+
+  on('file:preprocessor', webpack())
 }
