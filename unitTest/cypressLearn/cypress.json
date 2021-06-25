@@ -1,10 +1,6 @@
 {
     "baseUrl": "http://localhost:8080", 
     "reporter": "junit",
-    "reporterOptions": {
-        "mochaFile": "results/test-[hash].xml", 
-        "toConsole": true 
-    },
     "viewportHeight": 800, 
     "viewportWidth": 1600
 }
