@@ -10,6 +10,8 @@
   "author": "liuss",
   "license": "ISC",
   "devDependencies": {
+    "@vue/babel-plugin-transform-vue-jsx": "^1.2.1",
+    "@vue/babel-preset-jsx": "^1.2.4",
     "cypress": "^7.5.0",
     "cypress-file-upload": "^5.0.8",
     "jest": "^27.0.4"
