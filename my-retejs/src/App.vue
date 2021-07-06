@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import ConnectionMasteryPlugin from 'rete-connection-mastery-plugin';
+import ContextMenuPlugin from 'rete-context-menu-plugin';
 export default {
 	name: "App",
 	components: {},
@@ -71,6 +73,8 @@ export default {
 			var editor = new Rete.NodeEditor("demo@0.1.0", container)
 			editor.use(ConnectionPlugin)
 			editor.use(VueRenderPlugin)
+      editor.use(ConnectionMasteryPlugin);
+      editor.use(ContextMenuPlugin)
 
 			var engine = new Rete.Engine("demo@0.1.0")
 

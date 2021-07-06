@@ -1,3 +1,4 @@
+/** disable-eslint */
 import Vue from 'vue'
 import App from './App.vue'
 
@@ -10,7 +11,9 @@ Vue.prototype.ConnectionPlugin = ConnectionPlugin
 Vue.prototype.VueRenderPlugin = VueRenderPlugin
 
 Vue.config.productionTip = false
-
+console.log($1)
+console.log(jq)
+console.log(THING.CODELESS)
 new Vue({
   render: h => h(App),
 }).$mount('#app')
