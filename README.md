@@ -20,3 +20,6 @@
 - npx nyc report
 
 - npx nyc report --reporter=text-summary
+
+- OpenSSL SSL_connect: Connection was reset in connection to github.com:443
+  - git config --global --unset https.proxy
