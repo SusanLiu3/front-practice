@@ -16,6 +16,7 @@ function asyncAwait() {
         if (path.findParent(p => t.isTryStatement(p.node))) {
           return
         }
+        console.log(path.node,'&&&&')
         const expression = t.expressionStatement(path.node)
         const tryBlock = t.blockStatement([expression])
         // 生成catch 
