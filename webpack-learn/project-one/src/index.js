@@ -1,2 +1,2 @@
-import { helloWebpack } from './helloWebpack'
+import helloWebpack from './helloWebpack'
 document.write(helloWebpack())
