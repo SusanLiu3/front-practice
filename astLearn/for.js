@@ -39,11 +39,17 @@ traverse(ast, {
 
     const forExp = t.forStatement(varStatement, condition, update, bodyBlock)
 
+
+    const classFun = t.classMethod('constructor')
+    const classExp = t.classDeclaration(t.identifier('Student'),null)
+
+    // const classBody = t.classBody()
+
     const forBlock = t.blockStatement([forExp])
 
     const funExp = t.functionExpression(node.id, node.params, forBlock)
 
-    path.replaceWith(funExp)
+    path.replaceWith(funExp);
 
   }
 })
