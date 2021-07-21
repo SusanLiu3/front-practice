@@ -1,0 +1,16 @@
+/**
+* 此文件用于定义公共css
+*/
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}

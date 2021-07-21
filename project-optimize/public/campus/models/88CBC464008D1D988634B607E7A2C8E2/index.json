@@ -1,0 +1,25 @@
+{
+  "sourceFile": "C:\\Users\\Administrator\\Desktop\\测试1.max",
+  "gltfFiles": [
+    "88CBC464008D1D988634B607E7A2C8E2.json"
+  ],
+  "texFiles": {
+    "007B9566B29E3FED7C73A6B2519E2CC9": ".bin",
+    "F36554E9859F386F56F7BF48DDB64172": "960382.jpg"
+  },
+  "size": [
+    1708.47,
+    1134.06,
+    187.163
+  ],
+  "faces": 128,
+  "verts": 0,
+  "nodes": 17,
+  "createTime": "2020-08-21 14:13:42",
+  "authors": "xan01",
+  "author": "8032",
+  "computer": "WIN-OF3VKTNR9JE",
+  "max": "#(22000, 55, 0, 22, 0, 0, 757, 2020, \"\")",
+  "version": "2.0",
+  "extensionsFile": "extensions.json"
+}

@@ -1,0 +1,6 @@
+{
+    "baseUrl": "http://localhost:8080", 
+    "reporter": "junit",
+    "viewportHeight": 800, 
+    "viewportWidth": 1600
+}

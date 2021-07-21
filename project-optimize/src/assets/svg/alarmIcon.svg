@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="XHY-2-视频监控" transform="translate(-469.000000, -1072.000000)">
+            <g id="00000-left" transform="translate(97.000000, 192.000000)">
+                <g id="编组-9" transform="translate(0.000000, 876.000000)">
+                    <g id="图例" transform="translate(372.000000, 0.000000)">
+                        <g id="info_告警_regular" transform="translate(0.000000, 4.000000)">
+                            <circle id="椭圆形" stroke="#FF3F29" opacity="0.5" cx="10" cy="10" r="9.5"></circle>
+                            <polygon id="路径-12" fill="#FF3F29" points="5 10.4666667 9 10.4666667 8 17 15 8.6 11 8.6 11 3"></polygon>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

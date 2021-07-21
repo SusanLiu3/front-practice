@@ -1,0 +1,166 @@
+{
+  "id": "0",
+  "name": "World",
+  "camInfo": {
+    "eye": "-1695.8 374.326 -1148.85 ",
+    "target": "6.33575 93.5815 -7.39691 "
+  },
+  "models": [
+    {
+      "id": "88CBC464008D1D988634B607E7A2C8E2",
+      "title": "测试1",
+      "size": [
+        1708.47,
+        1134.06,
+        187.163
+      ],
+      "hasanimation": true,
+      "version": "0",
+      "localurl": "models/88CBC464008D1D988634B607E7A2C8E2"
+    }
+  ],
+  "textures": [],
+  "buildings": [
+    {
+      "id": 16,
+      "userid": "小白楼",
+      "model": 0,
+      "node": "小白楼",
+      "facades": [
+        {
+          "id": 3,
+          "model": 0,
+          "node": "小白楼外立面"
+        }
+      ],
+      "plans": [
+        {
+          "id": 7,
+          "name": "小白楼1层",
+          "userid": "小白楼1层",
+          "model": 0,
+          "node": "小白楼1层",
+          "rooms": [
+            {
+              "id": 6,
+              "userid": "Fl-办公楼1F地板_01",
+              "name": "Fl-办公楼1F地板_01",
+              "model": 0,
+              "node": "Fl-办公楼1F地板_01"
+            }
+          ],
+          "combineplacements": [
+            {
+              "id": 4,
+              "userid": "Cl-办公楼1F天花板_01",
+              "name": "Cl-办公楼1F天花板_01",
+              "model": 0,
+              "node": "Cl-办公楼1F天花板_01"
+            }
+          ],
+          "doororwindows": [],
+          "walls": [
+            {
+              "id": 5,
+              "userid": "Wl-办公楼1F墙_01",
+              "name": "Wl-办公楼1F墙_01",
+              "model": 0,
+              "node": "Wl-办公楼1F墙_01"
+            }
+          ],
+          "placements": [],
+          "ceilings": []
+        },
+        {
+          "id": 11,
+          "name": "小白楼2层",
+          "userid": "小白楼2层",
+          "model": 0,
+          "node": "小白楼2层",
+          "rooms": [
+            {
+              "id": 9,
+              "userid": "Fl-办公楼2F地板_01",
+              "name": "Fl-办公楼2F地板_01",
+              "model": 0,
+              "node": "Fl-办公楼2F地板_01"
+            }
+          ],
+          "combineplacements": [
+            {
+              "id": 10,
+              "userid": "Cl-办公楼2F天花板_01",
+              "name": "Cl-办公楼2F天花板_01",
+              "model": 0,
+              "node": "Cl-办公楼2F天花板_01"
+            }
+          ],
+          "doororwindows": [],
+          "walls": [
+            {
+              "id": 8,
+              "userid": "Wl-办公楼2F墙_01",
+              "name": "Wl-办公楼2F墙_01",
+              "model": 0,
+              "node": "Wl-办公楼2F墙_01"
+            }
+          ],
+          "placements": [],
+          "ceilings": []
+        },
+        {
+          "id": 15,
+          "name": "小白楼3层",
+          "userid": "小白楼3层",
+          "model": 0,
+          "node": "小白楼3层",
+          "rooms": [
+            {
+              "id": 13,
+              "userid": "Fl-办公楼3F地板_01",
+              "name": "Fl-办公楼3F地板_01",
+              "model": 0,
+              "node": "Fl-办公楼3F地板_01"
+            }
+          ],
+          "combineplacements": [
+            {
+              "id": 14,
+              "userid": "Cl-办公楼3F天花板_01",
+              "name": "Cl-办公楼3F天花板_01",
+              "model": 0,
+              "node": "Cl-办公楼3F天花板_01"
+            }
+          ],
+          "doororwindows": [],
+          "walls": [
+            {
+              "id": 12,
+              "userid": "Wl-办公楼3F墙_01",
+              "name": "Wl-办公楼3F墙_01",
+              "model": 0,
+              "node": "Wl-办公楼3F墙_01"
+            }
+          ],
+          "placements": [],
+          "ceilings": []
+        }
+      ]
+    }
+  ],
+  "outdoors": {
+    "id": "1",
+    "name": "园区",
+    "placements": [
+      {
+        "id": 2,
+        "userid": "地面",
+        "name": "地面",
+        "type": "物体",
+        "model": 0,
+        "node": "地面"
+      }
+    ],
+    "combineplacements": []
+  }
+}

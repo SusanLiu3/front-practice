@@ -1,0 +1,25 @@
+{
+  "name": "project-one",
+  "entry": "search",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "grunt-contrib-uglify": "^5.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
