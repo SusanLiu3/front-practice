@@ -8,5 +8,11 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].js'
   },
-  mode: 'production'
+  mode: 'production',
+  module: [
+    // {
+    //   test: /.js/,
+    //   use:
+    // }
+  ]
 }
