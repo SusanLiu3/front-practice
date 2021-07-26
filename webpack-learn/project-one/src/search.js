@@ -6,7 +6,7 @@ new Vue({
     el:'#app',
     render:function(h){
         return (<div class='test'>
-            test jsx 
+            test jsx page
             <img src={test}></img>
             </div>)
     }

@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack =require('webpack')
 module.exports = {
   entry: {
     index: './src/index.js',
@@ -10,7 +11,11 @@ module.exports = {
     path: path.join(__dirname, 'dist'),
     filename: '[name].[chunkhash].js'
   },
-  // mode: 'production',
+  devServer: {
+    hot:true,
+    contentBase: '/dist' ,// 告诉dev-server 将dist下的文件server到http://localhost
+  },
+  mode: 'development',
   module: {
     rules: [{
         test: /\.css$/i,
