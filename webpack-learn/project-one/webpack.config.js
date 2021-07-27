@@ -2,6 +2,7 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const webpack =require('webpack')
+const CssMinimizerPlugin= require('css-minimizer-webpack-plugin')
 module.exports = {
   entry: {
     index: './src/index.js',
@@ -19,11 +20,12 @@ module.exports = {
   module: {
     rules: [{
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
         test: /\.s[ac]ss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        // use: ['style-loader', 'css-loader', 'sass-loader']
+        use:[MiniCssExtractPlugin.loader,'css-loader','sass-loader']
       },
       {
         test: /\.js$/,
@@ -37,8 +39,9 @@ module.exports = {
       {
         test: /\.(jpe?g|png|gif)/i,
         use: [{
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
+            name: '[name][contenthash:8].[ext]', // [hash]
             esModule: false // 启用commonJS 模块
           }
         }]
@@ -57,10 +60,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      chunks: ['search']
+      chunks: ['search'],
+      minify:true
     }),
-    // new MiniCssExtractPlugin({
-    //   filename: '[name].[contenthash].css'
-    // }),
-  ]
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css'
+    }),
+  ],
+  optimization:{
+    // 生成环境压缩
+    minimizer:[
+      new CssMinimizerPlugin()
+    ],
+    minimize:true
+  }
 }
