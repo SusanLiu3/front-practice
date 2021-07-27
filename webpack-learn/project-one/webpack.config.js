@@ -72,6 +72,7 @@ module.exports = {
     minimizer:[
       new CssMinimizerPlugin()
     ],
+    // 开发环境压缩
     minimize:true
   }
 }
