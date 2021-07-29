@@ -6,8 +6,10 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin')
-const HtmlInlineCssWebpackPlugin =require('html-inline-css-webpack-plugin').default
+const HtmlInlineCssWebpackPlugin = require('html-inline-css-webpack-plugin').default
 // const autoprefixer = require('autoprefixer')
+const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
+
 module.exports = {
   entry: {
     index: './src/index.js',
@@ -114,7 +116,14 @@ module.exports = {
       filename: '[name].[contenthash].css'
     }),
     new CleanWebpackPlugin(),
-    new HtmlInlineCssWebpackPlugin()
+    new HtmlInlineCssWebpackPlugin(),
+    new HtmlWebpackExternalsPlugin({
+      externals: [{
+        module: 'vue',
+        entry: 'https://lib.baomitu.com/vue/2.6.12/vue.min.js',
+        global: 'vue'
+      }]
+    })
   ],
   optimization: {
     // 生成环境压缩
@@ -122,6 +131,18 @@ module.exports = {
       new CssMinimizerPlugin()
     ],
     // 开发环境压缩
-    minimize: true
+    minimize: true,
+    splitChunks: {
+      minSize: 0,
+      minRemainingSize: 0,
+      minChunks: 1,
+      cacheGroups: {
+        test: {
+          name: 'test',
+          chunks: 'initial',
+          minChunks: 1,
+        }
+      }
+    }
   }
 }
