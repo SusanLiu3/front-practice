@@ -1,6 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const {CleanWebpackPlugin }=require('clean-webpack-plugin')
 module.exports = {
     entry: {
         index: './src/index.js',
@@ -14,11 +15,39 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader']
+                use: ['style-loader', 'css-loader',{
+                    loader:'postcss-loader',
+                    options:{
+                        postcssOptions:{
+                            plugins:[
+                                ['autoprefixer',{
+                                    overrideBrowserslist:[
+                                        "last 2 versions",
+                                        "not ie<=8"
+                                    ]
+                                }]
+                            ]
+                        }
+                    }
+                }]
             },
             {
                 test: /\.s[ac]ss$/i,
-                use: ['style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader', {
+                    loader: 'postcss-loader',
+                    options: {
+                        postcssOptions: {
+                           plugins: [
+                               ['autoprefixer', {
+                                   overrideBrowserslist: [
+                                       "last 2 versions",
+                                       "not ie<=8"
+                                   ]
+                               }]
+                           ]
+                        }
+                    }
+                }]
             },
             {
                 test: /\.js$/,
@@ -54,6 +83,7 @@ module.exports = {
             template: './src/index.html',
             chunks: ['search']
         }),
+        new CleanWebpackPlugin()
         // new MiniCssExtractPlugin({
         //   filename: '[name].[contenthash].css'
         // }),

@@ -1,8 +1,12 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const webpack =require('webpack')
-const CssMinimizerPlugin= require('css-minimizer-webpack-plugin')
+const webpack = require('webpack')
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
+const {
+  CleanWebpackPlugin
+} = require('clean-webpack-plugin')
+// const autoprefixer = require('autoprefixer')
 module.exports = {
   entry: {
     index: './src/index.js',
@@ -13,19 +17,49 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   },
   devServer: {
-    hot:true,
-    contentBase: '/dist' ,// 告诉dev-server 将dist下的文件server到http://localhost
+    hot: true,
+    contentBase: '/dist', // 告诉dev-server 将dist下的文件server到http://localhost
   },
   mode: 'development',
   module: {
     rules: [{
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [
+                [
+                  'autoprefixer', {
+                    browsers: [
+                      "last 2 versions",
+                      "not ie<=8"
+                    ]
+                  }
+                ]
+              ]
+            }
+          }
+        }]
       },
       {
         test: /\.s[ac]ss$/i,
         // use: ['style-loader', 'css-loader', 'sass-loader']
-        use:[MiniCssExtractPlugin.loader,'css-loader','sass-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader', {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [
+                ['autoprefixer', {
+                  overrideBrowserslist: [
+                    "last 2 versions",
+                    "not ie<=8"
+                  ]
+                }]
+              ]
+            }
+          }
+        }]
       },
       {
         test: /\.js$/,
@@ -61,18 +95,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       chunks: ['search'],
-      minify:true
+      minify: true
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
+    new CleanWebpackPlugin()
   ],
-  optimization:{
+  optimization: {
     // 生成环境压缩
-    minimizer:[
+    minimizer: [
       new CssMinimizerPlugin()
     ],
     // 开发环境压缩
-    minimize:true
+    minimize: true
   }
 }

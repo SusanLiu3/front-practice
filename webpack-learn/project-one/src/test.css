@@ -4,4 +4,5 @@ body{
 }
 .test{
     color: #f45;
+    display: flex;
 }
