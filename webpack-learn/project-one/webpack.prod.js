@@ -1,7 +1,9 @@
 const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin }=require('clean-webpack-plugin')
+const {
+    CleanWebpackPlugin
+} = require('clean-webpack-plugin')
 module.exports = {
     entry: {
         index: './src/index.js',
@@ -15,13 +17,13 @@ module.exports = {
     module: {
         rules: [{
                 test: /\.css$/i,
-                use: ['style-loader', 'css-loader',{
-                    loader:'postcss-loader',
-                    options:{
-                        postcssOptions:{
-                            plugins:[
-                                ['autoprefixer',{
-                                    overrideBrowserslist:[
+                use: ['style-loader', 'css-loader', {
+                    loader: 'postcss-loader',
+                    options: {
+                        postcssOptions: {
+                            plugins: [
+                                ['autoprefixer', {
+                                    overrideBrowserslist: [
                                         "last 2 versions",
                                         "not ie<=8"
                                     ]
@@ -37,14 +39,14 @@ module.exports = {
                     loader: 'postcss-loader',
                     options: {
                         postcssOptions: {
-                           plugins: [
-                               ['autoprefixer', {
-                                   overrideBrowserslist: [
-                                       "last 2 versions",
-                                       "not ie<=8"
-                                   ]
-                               }]
-                           ]
+                            plugins: [
+                                ['autoprefixer', {
+                                    overrideBrowserslist: [
+                                        "last 2 versions",
+                                        "not ie<=8"
+                                    ]
+                                }]
+                            ]
                         }
                     }
                 }]

@@ -3,6 +3,7 @@ body{
     font-size: 12px;
 }
 .test{
-    color: #f45;
+    color: rgb(221, 206, 207);
     display: flex;
+    font-size: 14px;
 }

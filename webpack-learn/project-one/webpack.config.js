@@ -6,6 +6,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin')
+const HtmlInlineCssWebpackPlugin =require('html-inline-css-webpack-plugin').default
 // const autoprefixer = require('autoprefixer')
 module.exports = {
   entry: {
@@ -31,7 +32,7 @@ module.exports = {
               plugins: [
                 [
                   'autoprefixer', {
-                    browsers: [
+                    overrideBrowserslist: [
                       "last 2 versions",
                       "not ie<=8"
                     ]
@@ -39,6 +40,12 @@ module.exports = {
                 ]
               ]
             }
+          }
+        }, {
+          loader: 'px2rem-loader',
+          options: {
+            remUni: 75,
+            remPrecision: 8
           }
         }]
       },
@@ -58,6 +65,12 @@ module.exports = {
                 }]
               ]
             }
+          }
+        }, {
+          loader: 'px2rem-loader',
+          options: {
+            remUni: 75,
+            remPrecision: 8
           }
         }]
       },
@@ -100,7 +113,8 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new HtmlInlineCssWebpackPlugin()
   ],
   optimization: {
     // 生成环境压缩
