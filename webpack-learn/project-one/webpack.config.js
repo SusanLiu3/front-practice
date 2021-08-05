@@ -9,6 +9,7 @@ const {
 const HtmlInlineCssWebpackPlugin = require('html-inline-css-webpack-plugin').default
 // const autoprefixer = require('autoprefixer')
 const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin')
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -124,7 +125,10 @@ module.exports = {
         entry: 'https://lib.baomitu.com/vue/2.6.12/vue.min.js',
         global: 'vue'
       }]
-    })
+    }),
+    // new FriendlyErrorsWebpackPlugin({
+    //   clearConsole:true
+    // })
   ],
   optimization: {
     // 生成环境压缩
@@ -145,5 +149,6 @@ module.exports = {
         }
       }
     }
-  }
+  },
+  stats: 'errors-only'
 }
