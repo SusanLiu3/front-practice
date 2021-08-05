@@ -10,6 +10,7 @@
            },
            "useBuiltIns": "usage",
            "corejs": "3.6.5"
-       }],["@vue/babel-preset-jsx"]
-   ]
+       }], ["@vue/babel-preset-jsx"]
+   ],
+   "plugins": ["@babel/plugin-syntax-dynamic-import"]
 }

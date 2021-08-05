@@ -20,10 +20,11 @@ module.exports = {
     filename: '[name].[chunkhash].js'
   },
   devServer: {
+    port:8081,
     hot: true,
     contentBase: '/dist', // 告诉dev-server 将dist下的文件server到http://localhost
   },
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [{
         test: /\.css$/i,

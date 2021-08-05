@@ -1,3 +1,7 @@
 export function sayHi(){
-    return 'hi'
+    return 'hiooppooopii'
+}
+
+export function sayTreeShaking(){
+    return 'tree shaking' 
 }
