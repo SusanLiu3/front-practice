@@ -9,7 +9,8 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack",
     "start": "webpack server --open",
-    "node": "node src/search.ssr.js"
+    "node": "node server/index.js",
+    "build:ssr":"webpack --config webpack.ssr.js"
   },
   "keywords": [],
   "author": "",
