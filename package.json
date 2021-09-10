@@ -14,5 +14,15 @@
     "babel-preset-es2015": "^6.24.1",
     "browserify": "^17.0.0",
     "l": "^0.6.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://SusanLiu@github.com/SusanLiu93/front-practice.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/SusanLiu93/front-practice/issues"
+  },
+  "homepage": "https://github.com/SusanLiu93/front-practice#readme"
 }

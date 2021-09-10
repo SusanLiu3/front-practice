@@ -1,0 +1,6 @@
+const Compiler =require('./compiler.js')
+const path =require('path')
+const options = require(path.join(process.cwd(), '/simple.webpack.config.js'))
+// 根目录 process.cwd()
+const compiler = new Compiler(options)
+compiler.run()
