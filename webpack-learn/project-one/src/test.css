@@ -1,0 +1,9 @@
+body{
+    color: #f45;
+    font-size: 12px;
+}
+.test{
+    color: rgb(221, 206, 207);
+    display: flex;
+    font-size: 14px;
+}

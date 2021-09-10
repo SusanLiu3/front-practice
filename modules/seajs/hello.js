@@ -1,7 +1,6 @@
 define(function (require, exports, module) {
-    const { msg, fun } = require('./world')
-    module.exports = function () {
-        console.log(msg)
-        fun()
+    let obj = require('./world') // {msg:'world'}
+    exports.sayHi = function () {
+        console.log('hello', obj.msg)
     }
-})
+});
