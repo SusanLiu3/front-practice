@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+         * 接受一个执行器函数,这个执行器立马执行
+         * 它接受2个参数，一个是resolve 一个是reject
+         * MyPromise 原型上有 then catch 方法
+         * 实例对象上有 resolve reject all race等方法
+         */
+        const PENDING = 'pending'
+        const RESOLVED = 'resolved'
+        const REJECTED = 'rejected'
+
+        function MyPromise(excutor) {
+            this.status = PENDING
+            this.data = null
+            this.callbacks = []; // {onResolved(){},onRejected(){}}
+            const self = this; // 缓存this
+            function resolve(val) {
+                // 因为状态变化后，就不能再改变
+                if (self.status !== PENDING) {
+                    return
+                }
+                // 保存数据
+                self.data = val
+                self.status = RESOLVED
+                // 当调用resolve 函数时，会把回调函数推入执行栈，等待被执行
+                setTimeout(() => {
+                    self.callbacks.forEach(cb => {
+                        cb.onResolved(val)
+                    });
+                }, 0);
+            }
+
+            function reject(reason) {
+                // 因为状态变化后，就不能再改变
+                if (self.status !== PENDING) {
+                    return
+                }
+                // 保存数据
+                self.data = reason
+                self.status = REJECTED
+                // 当调用resolve 函数时，会把回调函数推入执行栈，等待被执行
+                setTimeout(() => {
+                    self.callbacks.forEach(cb => {
+                        cb.onRejected(reason) // 模拟异步
+                    });
+                }, 0);
+
+            }
+            excutor(resolve, reject)
+        }
+
+
+        /**
+         *  返回新的promise
+         * 
+         */
+        MyPromise.prototype.then = function (onResolved, onRejected) {
+
+            const self = this
+            return new MyPromise((resolve, reject) => {
+                /**
+                 * callback 可以是onResolved 也可以是onReject
+                 */
+                function handler(callback) {
+                    try {
+                        const result = callback(self.data)
+                        if (result instanceof MyPromise) {
+                            // result.then(value=>{
+                            // resolve(value)
+                            // },reason=>{
+                            // reject(reason)
+                            // })
+                            result.then(resolve, reject)
+                        } else {
+                            // 如果是非 promise
+                            resolve(result)
+                        }
+                    } catch (error) {
+                        // 异常处理
+                        reject(error)
+                    }
+                }
+                // 状态可能是pending 也可能是resolved 也可能是rejected
+                if (this.status === PENDING) {
+                    // 保存回调函数
+                    this.callbacks.push({
+                        onResolved: () => {
+                            handler(onResolved)
+                        },
+                        onRejected: () => {
+                            handler(onRejected)
+                        }
+                    })
+                } else if (this.status === RESOLVED) {
+                    // 如果当前状态是resolved，那么直接调用onResolved
+                    setTimeout(() => {
+                        handler(onResolved)
+                    });
+
+                } else {
+                    setTimeout(() => {
+                        handler(onRejected)
+                    });
+                }
+            })
+
+        }
+        MyPromise.prototype.catch = function (onRejected) {
+            const self = this
+            return new Promise((resolve, reject) => {
+                function handler(callback) {
+                    try {
+                        const result = callback(self.data)
+                        if (result instanceof MyPromise) {
+                            // result.then(value=>{
+                            // resolve(value)
+                            // },reason=>{
+                            // reject(reason)
+                            // })
+                            result.then(resolve, reject)
+                        } else {
+                            // 如果是非 promise
+                            resolve(result)
+                        }
+                    } catch (error) {
+                        // 异常处理
+                        reject(error)
+                    }
+                }
+                if (this.status === PENDING) {
+                    // 保存回调函数
+                    this.callbacks.push({
+                        onResolved: undefined,
+                        onRejected: () => {
+                            handler(onRejected)
+                        }
+                    })
+                } else if (this.status === REJECTED) {
+                    setTimeout(() => {
+                        handler(onRejected)
+                    });
+                }
+            })
+
+        }
+
+        // 简单测试
+        const p = new MyPromise((resolve, reject) => {
+            setTimeout(() => {
+                // resolve(0)
+                reject(1)
+            });
+        }).then(val => {
+            console.log('resolved', val)
+        }, reason => {
+            console.log('onRejected', reason)
+        }).then(val => {
+            console.log('resolved', 3)
+            reject('77')
+        }).catch(reason => {
+            console.log('reject2', reason)
+        }).then(val => {
+            console.log('resolved', 44)
+        })
+    </script>
+</body>
+
+</html>
