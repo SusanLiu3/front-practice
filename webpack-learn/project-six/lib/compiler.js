@@ -41,6 +41,7 @@ module.exports = class Compiler {
             
         }
     }
+    // 写入文件
     emitFile(){
         const outputPath =path.join(this.output.path,this.output.filename)
         let modules ='{'
